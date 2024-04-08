@@ -13,7 +13,7 @@ export default function MainLayout(props) {
             className="w-100 h-100 object-fit-cover"
             muted
             autoPlay
-            src="bg.mp4"
+            src={"/bg.mp4"}
           ></video>
         </div>
        
