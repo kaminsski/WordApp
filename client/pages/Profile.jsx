@@ -17,7 +17,7 @@ export default function Profile() {
   const { user } = useContext(WordContext);
   const getAllWord = async () => {
     const response = await fetch(
-      `http://localhost:7003/api/word/user/${user && user._id}`
+      `https://word-app-seven.vercel.app/api/word/user/${user && user._id}`
     );
     const responseData = await response.json();
     setwords(responseData);
@@ -37,7 +37,7 @@ export default function Profile() {
       userId: user._id,
     };
     try {
-      const response = await fetch("http://localhost:7003/api/word/", {
+      const response = await fetch("https://word-app-seven.vercel.app/api/word/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

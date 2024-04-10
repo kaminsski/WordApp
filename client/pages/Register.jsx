@@ -22,7 +22,7 @@ function Register() {
       };
   
       try {
-          const response = await fetch("http://localhost:7003/api/user/register", {
+          const response = await fetch("https://word-app-seven.vercel.app/api/user/register", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json",

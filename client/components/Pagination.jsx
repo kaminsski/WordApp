@@ -6,7 +6,7 @@ export default function Pagination({words, page, getAllWord}) {
 
     const deleteWord = async(id) =>{
         try {
-            const response = await fetch(`http://localhost:7003/api/word/${id}`,{
+            const response = await fetch(`https://word-app-seven.vercel.app/api/word/${id}`,{
                 method:"DELETE",
     
             })
