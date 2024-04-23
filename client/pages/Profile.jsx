@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { WordContext } from "../providers/WordProvider";
 import Pagination from "../components/Pagination";
 import PaginationBar from "../components/PaginationBar";
+import { FaRegUserCircle } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Profile() {
   const [words, setwords] = useState([]);
@@ -64,13 +66,16 @@ export default function Profile() {
   return (
     <>
       <div className="bg-white bg-opacity-75 p-3 m-2 text-center col-10 col-md-6 mx-auto rounded-2">
-        <div className="infoItem mb-3">
+        <div className="infoItem mb-3 position-relative">
           <h3 className="fs-3">Username</h3>
-          <p className="bg-white">{user && user.username}</p>
+         
+
+          <p className="bg-white p-2 rounded-4 d-flex  gap-4 align-items-center"> <FaRegUserCircle size={30} className=" "/>{user && user.username}</p>
         </div>
         <div className="infoItem ">
           <h3 className="fs-4">Email</h3>
-          <p className="bg-white">{user && user.email}</p>
+          <p className="bg-white p-2 rounded-4 d-flex  gap-4 align-items-center"><MdEmail size={30}/>
+{user && user.email}</p>
         </div>
       </div>
 
@@ -80,6 +85,8 @@ export default function Profile() {
           className="bg-white bg-opacity-75 d-flex flex-column align-items-center p-3"
         >
           <div className="wordContainer gap-2 d-md-flex d-block my-2">
+            <div className=" d-flex align-items-center">
+            <img className="" style={{width:"30px", height:"30px"}} src="/uk.png" alt="" />
             <input
               className="d-md-block d-block my-2 my-md-0"
               value={eng}
@@ -89,6 +96,9 @@ export default function Profile() {
               placeholder="English"
               type="text"
             />
+            </div>
+            <div className="flex align-items-center">
+            <img className="" style={{width:"30px", height:"30px"}} src="/tr.png" alt="" />
             <input
               value={tr}
               onChange={(e) => {
@@ -97,6 +107,8 @@ export default function Profile() {
               placeholder="Turkish"
               type="text"
             />
+            </div>
+            
           </div>
           <div className="sentence">
             <input
