@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="row justify-content-center mt-3">
+      <div className="row justify-content-center mt-3 mx-0">
         <div className="col-10 col-lg-6 bg-light bg-opacity-75 rounded-5 p-4">
           <h1>Engage in Fun and Interactive Word Exercises!</h1>
           <p>
@@ -35,7 +35,7 @@ export default function Home() {
               <div className="loginContainer">
                 <p className="mb-2">Log in or sign up to get started</p>
                 <Link
-                  className="text-primary  text-decoration-none"
+                  className="text-primary  text-decoration-none mx-3"
                   to="/register"
                 >
                   <i className="mx-1 fa-solid fa-user-plus"></i>Register

@@ -49,7 +49,7 @@ function Login() {
   return (
     <div className="row justify-content-center mt-5">
         <div className="col-10 col-lg-6">
-    <Form onSubmit={loginHandle} className='bg-white p-3 bg-opacity-75'>
+    <Form onSubmit={loginHandle} className='bg-white p-3 bg-opacity-75 rounded-4'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label className='fw-bold'>Username</Form.Label>
         <Form.Control value={username} onChange={(e)=>{setUsername(e.target.value)}} type="text" placeholder="Enter username" />

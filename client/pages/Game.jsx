@@ -68,13 +68,13 @@ export default function Game() {
   return (
     <>
     <div className="gameContainer container mt-5">
-      <div className="bg-white bg-opacity-75 p-3">
+      <div className="bg-white bg-opacity-75 p-3 rounded-4">
       {start ? (
             <>
             <div className='d-flex flex-column gap-2'>
-              <p className='mb-0'>English</p><input className='w-50'  type="text" value={eng} readOnly/>
-              <p className='mb-0'>Turkish</p><input className='w-50' type="text" value={tr} onChange={(e)=>{setTr(e.target.value)}}/>
-              <p className='mb-0'>Sentence</p><input value={sentence} type="text" readOnly/>
+              <p className='fs-4 fw-bold mb-0'>English</p><input className='rounded-2 w-50'  type="text" value={eng} readOnly/>
+              <p className='fs-4 fw-bold mb-0'>Turkish</p><input className='rounded-2 w-50' type="text" value={tr} onChange={(e)=>{setTr(e.target.value)}}/>
+              <p className='fs-4 fw-bold mb-0'>Sentence</p><input className='rounded-2' value={sentence} type="text" readOnly/>
                 <button onClick={submitHandle} className='btn btn-success d-block mt-3 w-50 mx-auto'>Submit</button>
                 </div>
 
